@@ -11,6 +11,8 @@ def load_mnist():
         "test_images": "t10k-images-idx3-ubyte.gz",
         "test_labels": "t10k-labels-idx1-ubyte.gz",
     }
+    // it is a dictionary in whcih there is the nickname for every key variable and also 
+    // it just loop through it every single time 
 
     os.makedirs("mnist_data", exist_ok=True)
     data = {}
