@@ -35,6 +35,8 @@ def load_mnist():
     return data["train_images"], data["train_labels"], data["test_images"], data["test_labels"]
 
 X_train, y_train, X_test, y_test = load_mnist()
+X_train = X_train / 255.0
+X_test = X_test / 255.0
 print(X_train.shape, y_train.shape, X_test.shape, y_test.shape)
 import matplotlib.pyplot as plt
 
