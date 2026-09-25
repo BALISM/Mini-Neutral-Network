@@ -36,3 +36,12 @@ def load_mnist():
 
 X_train, y_train, X_test, y_test = load_mnist()
 print(X_train.shape, y_train.shape, X_test.shape, y_test.shape)
+import matplotlib.pyplot as plt
+
+# pick the first image and reshape it back into a 28x28 grid
+image = X_train[0].reshape(28, 28)
+label = y_train[0]
+
+plt.imshow(image, cmap="gray")
+plt.title(f"Label: {label}")
+plt.show()
