@@ -17,7 +17,7 @@ def load_mnist():
     os.makedirs("mnist_data", exist_ok=True) // file info will be stored in this directory and if it does not exist it will create it
     data = {}
 
-    for key, filename in files.items():
+    for key, filename in files.items(): // loop through the dictionary and get the key and filename 
         filepath = f"mnist_data/{filename}"
         if not os.path.exists(filepath):
             print(f"Downloading {filename}...")
