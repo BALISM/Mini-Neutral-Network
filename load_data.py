@@ -2,6 +2,7 @@ import numpy as np
 import urllib.request # useed to download 
 import gzip # used to extract the data from the compressed file
 import os #used to create a directory if it does not exist
+import matplotlib.pyplot as plt
 
 def load_mnist():
     base_url = "https://storage.googleapis.com/cvdf-datasets/mnist/"
@@ -38,7 +39,7 @@ X_train, y_train, X_test, y_test = load_mnist()
 X_train = X_train / 255.0
 X_test = X_test / 255.0
 print(X_train.shape, y_train.shape, X_test.shape, y_test.shape)
-import matplotlib.pyplot as plt
+
 
 # pick the first image and reshape it back into a 28x28 grid
 image = X_train[0].reshape(28, 28)
