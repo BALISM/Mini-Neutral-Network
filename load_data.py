@@ -14,7 +14,7 @@ def load_mnist():
     // it is a dictionary in whcih there is the nickname for every key variable and also 
     // it just loop through it every single time whenever we call the function 
 
-    os.makedirs("mnist_data", exist_ok=True)
+    os.makedirs("mnist_data", exist_ok=True) // file info will be stored in this directory and if it does not exist it will create it
     data = {}
 
     for key, filename in files.items():
