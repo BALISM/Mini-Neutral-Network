@@ -1,7 +1,7 @@
 import numpy as np
-import urllib.request
-import gzip
-import os
+import urllib.request // useed to download 
+import gzip // used to extract the data from the compressed file
+import os // used to create a directory if it does not exist
 
 def load_mnist():
     base_url = "https://storage.googleapis.com/cvdf-datasets/mnist/"
@@ -12,7 +12,7 @@ def load_mnist():
         "test_labels": "t10k-labels-idx1-ubyte.gz",
     }
     // it is a dictionary in whcih there is the nickname for every key variable and also 
-    // it just loop through it every single time 
+    // it just loop through it every single time whenever we call the function 
 
     os.makedirs("mnist_data", exist_ok=True)
     data = {}
